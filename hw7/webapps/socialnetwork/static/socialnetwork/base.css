@@ -1,0 +1,129 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#id_header_div {
+    text-align: left;
+    font-size: xx-large;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #5289dc;
+    color: white;
+    font-family: sans-serif;
+}
+
+#id_page_name {
+    text-align: center;
+    font-size: 36px;
+    font-family: sans-serif;
+}
+
+.nav-links a {
+    margin-left: 10px;
+    font-family: sans-serif;
+    color: white;
+    text-align: right;
+}
+
+#nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#bottom-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.form-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-field label, .form-field input, button {
+    font-size: 18px; /* Adjusted to meet minimum font size */
+}
+
+button {
+    padding: 3px;
+    height: 30px;
+    width: 80px;
+}
+
+textarea#id_bio_input {
+    width: 400px;
+    height: 200px;
+    font-family: sans-serif;
+}
+
+.post {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+.comment {
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+}
+
+.error {
+    color: red;
+}
+
+#id_username, 
+label[for=id_username], 
+#id_password, 
+label[for=id_password] {
+    font-size: 18px; 
+}
+
+input[type=text], 
+input[type=password], 
+label {
+    font-size: 18px; 
+}
+
+[id^='id_post_text_'],
+[id^='id_post_date_time_'],
+[id^='id_post_profile_'],
+[id^='id_comment_text_'],
+[id^='id_comment_date_time_'],
+[id^='id_comment_profile_'] {
+    font-size: 18px;  
+}
+
+[id^='id_post_date_time_'],
+[id^='id_comment_date_time_'] {
+    font-style: italic; 
+}
+
+.post_div {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+.comment-div {
+    margin-top: 10px;
+    margin-left: 30px;  
+    padding-left: 50px;
+    border-left: 2px solid #ddd;
+}
+
+.commentForm {
+    order: 1; 
+    margin-top: 10px;
+    padding-left: 30px;
+}

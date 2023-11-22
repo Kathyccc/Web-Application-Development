@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Blog Master{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="/static/socialnetwork/base.css" />
+    <script src='/static/socialnetwork/socialnetwork.js' type="text/javascript"></script>
+</head>
+<body>
+    <div id="id_header_div">
+        <h1 id="id_site_name">Blog Master</h1>
+
+        <div class="nav-links">
+			{% block nav-links %}
+			{% endblock %}
+		</div>
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>
