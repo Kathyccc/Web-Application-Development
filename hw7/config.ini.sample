@@ -1,0 +1,9 @@
+[settings]
+SECRET_KEY = YOUR_SECRET_KEY_GOES_HERE
+DATABASE_ENGINE = django.db.backends.postgresql
+DATABASE_NAME = your_database_name
+DATABASE_USER = your_database_user
+DATABASE_PASSWORD = your_database_password
+DATABASE_HOST = your_database_host
+DATABASE_PORT = your_database_port
+
