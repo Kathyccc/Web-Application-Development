@@ -1,0 +1,38 @@
+{% extends "socialnetwork/base.html" %}
+
+{% block nav-links %}
+    <div id="nav-container">
+        <a href="{% url 'profile' %}" id="id_nav_profile">{{ user.first_name }} {{ user.last_name }}</a>
+        <div id="bottom-links">
+            <a href="{% url 'global' %}" id="id_nav_global_stream">Global</a>
+            <a href="{% url 'follower' %}" id="id_nav_follower_stream">Follower</a>
+            <a href="{% url 'logout' %}" id="id_nav_logout">Logout</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <h2 id="id_page_name">Profile Page for {{ user.first_name }} {{ user.last_name }}</h2>
+    
+    <div id="profile_content">
+        <img src="{{ user.profile_picture_url|default:'/static/socialnetwork/Cat03.jpg' }}" id="id_user_picture">
+
+        <form method="post" action="#" enctype="multipart/form-data">
+            {% csrf_token %}
+            <textarea id="id_bio_input_text" name="bio">{{ bio }}</textarea>
+            <label for="id_profile_picture">Profile Picture:</label>
+            <input type="file" id="id_profile_picture" name="profile_picture">
+            
+            <button type="submit" id="id_update_profile_button">Submit</button>
+        </form>
+        
+        <div id="following_list">
+            <p>You are following:</p>
+            <ul>
+                {% for followed_user in followed_users %}
+                    <li><a href="#" id="id_profile_link_{{ followed_user.username }}">{{ followed_user.first_name }} {{ followed_user.last_name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

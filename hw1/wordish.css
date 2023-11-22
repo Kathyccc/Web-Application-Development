@@ -1,0 +1,51 @@
+.wrapper {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: 400px;
+    height: 520px;
+    padding-top: 20px;
+}
+#status {
+    border: 1px solid black;
+    padding: 10px 10px;
+    width: 280px;
+    text-align: center;
+    background-color: rgb(191, 191, 191);
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;  /* This will give it a larger font size similar to h2 */
+}
+.matrix {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    width: 280px;
+    font-family: Arial, sans-serif;
+}
+.cell {
+    background-color: rgb(191, 191, 191);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    aspect-ratio: 1 / 1;
+    font-family: Arial, sans-serif;
+}
+label {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+#guess_text {
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+#guess_button {
+    padding: 5px 10px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    height: 40px;
+}

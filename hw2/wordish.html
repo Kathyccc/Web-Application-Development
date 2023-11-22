@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome to Wordish</title>
+        <link rel="stylesheet" href="css/wordish.css">
+        <script src="js/wordish.js"> </script>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="wrapper">
+                <div id="status">Welcome</div>
+                <br>
+                <div class="matrix">
+                <div id="cell_0_0" class="cell"></div>
+                <div id="cell_0_1" class="cell"></div>
+                <div id="cell_0_2" class="cell"></div>
+                <div id="cell_0_3" class="cell"></div>
+                <div id="cell_0_4" class="cell"></div>
+                <div id="cell_1_0" class="cell"></div>
+                <div id="cell_1_1" class="cell"></div>
+                <div id="cell_1_2" class="cell"></div>
+                <div id="cell_1_3" class="cell"></div>
+                <div id="cell_1_4" class="cell"></div>
+                <div id="cell_2_0" class="cell"></div>
+                <div id="cell_2_1" class="cell"></div>
+                <div id="cell_2_2" class="cell"></div>
+                <div id="cell_2_3" class="cell"></div>
+                <div id="cell_2_4" class="cell"></div>
+                <div id="cell_3_0" class="cell"></div>
+                <div id="cell_3_1" class="cell"></div>
+                <div id="cell_3_2" class="cell"></div>
+                <div id="cell_3_3" class="cell"></div>
+                <div id="cell_3_4" class="cell"></div>
+                <div id="cell_4_0" class="cell"></div>
+                <div id="cell_4_1" class="cell"></div>
+                <div id="cell_4_2" class="cell"></div>
+                <div id="cell_4_3" class="cell"></div>
+                <div id="cell_4_4" class="cell"></div>
+                <div id="cell_5_0" class="cell"></div>
+                <div id="cell_5_1" class="cell"></div>
+                <div id="cell_5_2" class="cell"></div>
+                <div id="cell_5_3" class="cell"></div>
+                <div id="cell_5_4" class="cell"></div>
+                </div><br>
+                <div class="row">
+                <label for="guess_text"> Guess: </label>
+                <input id="guess_text" type="text" autofocus="">
+                <button id="guess_button" onclick="processGuess()" type="submit">Submit</button>
+                </div>
+            </div>
+            <br>
+            <div class="start-box">
+                <label for="target_text">New Target:</label>
+                <input id="target_text" type="text">
+                <button id="start_button" onclick="startGame()">Start</button>
+            </div>
+        </div>
+        </body>
+</html>

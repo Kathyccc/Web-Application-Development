@@ -1,0 +1,88 @@
+.main-container {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: start; 
+    padding: 20px; 
+}
+.wrapper {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(135, 134, 134, 0.8);
+    height: 520px;
+    padding-top: 20px;
+    margin-right: 20px;
+}
+#status {
+    border: 1px solid rgba(135, 134, 134, 0.8);
+    padding: 10px 10px;
+    width: 280px;
+    text-align: center;
+    background-color: rgb(191, 191, 191);
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;  /* This will give it a larger font size similar to h2 */
+}
+.matrix {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    width: 280px;
+    font-family: Arial, sans-serif;
+}
+.cell {
+    background-color: rgb(191, 191, 191);
+    border: 1px solid rgba(135, 134, 134, 0.8);
+    padding: 10px;
+    aspect-ratio: 1 / 1;
+    font-family: Arial, sans-serif;
+
+    display: flex;            
+    justify-content: center;  
+    align-items: center;
+    font-size: 18px;
+    color: white
+}
+label {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+#guess_text {
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+#guess_button {
+    padding: 5px 10px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    height: 40px;
+}
+.start-box {
+    margin-left: 20px;
+    margin-top: 250px; 
+    width: 400px;  
+    height: 60px;  
+    border: 1px solid rgba(135, 134, 134, 0.8);
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;  
+    align-items: center;  
+    justify-content: space-between;  
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+#start_button {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    height: 40px;
+    width: auto; /* Letting the button adjust its width based on content and padding */
+    padding: 10px 15px;
+}
+#target_text {
+    font-size: 14px;  
+    width: 150px;
+}

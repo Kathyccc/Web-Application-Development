@@ -1,0 +1,110 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#id_header_div {
+    text-align: left;
+    font-size: xx-large;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #5289dc;
+    color: white;
+    font-family: sans-serif;
+}
+
+#id_page_name {
+    text-align: center;
+    font-size: 36px;
+    font-family: sans-serif;
+}
+
+.nav-links a {
+    margin-left: 10px;
+    font-family: sans-serif;
+    color: white;
+    text-align: right;
+}
+
+#nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#bottom-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.form-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-field label, .form-field input, button {
+    font-size: 18px; /* Adjusted to meet minimum font size */
+}
+
+button {
+    padding: 3px;
+    height: 30px;
+    width: 80px;
+}
+
+textarea#id_bio_input {
+    width: 400px;
+    height: 200px;
+    font-family: sans-serif;
+}
+
+.post {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+.comment {
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+}
+
+.error {
+    color: red;
+}
+
+#id_post_text_1,
+#id_post_date_time_1,
+#id_post_profile_1,
+#id_comment_text_1,
+#id_comment_date_time_1,
+#id_comment_profile_1 {
+    font-size: 18px; 
+}
+
+#id_post_date_time_1,
+#id_comment_date_time_1 {
+    font-style: italic; 
+}
+
+#id_username, 
+label[for=id_username], 
+#id_password, 
+label[for=id_password] {
+    font-size: 18px; 
+}
+
+input[type=text], 
+input[type=password], 
+label {
+    font-size: 18px; 
+}
+
