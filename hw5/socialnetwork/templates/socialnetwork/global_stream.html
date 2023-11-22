@@ -1,0 +1,41 @@
+{% extends "socialnetwork/base.html" %}
+
+
+{% block nav-links %}
+    <div id="nav-container">
+        <a href="{% url 'profile' %}" id="id_nav_profile">{{ user.first_name }} {{ user.last_name }}</a>
+        <div id="bottom-links">
+            <a href="{% url 'global' %}" id="id_nav_global_stream">Global</a>
+            <a href="{% url 'follower' %}" id="id_nav_follower_stream">Follower</a>
+            <a href="{% url 'logout' %}" id="id_nav_logout">Logout</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <h2 id="id_page_name">Global Stream</h2>
+    <br>
+    <div class="global-stream">
+        <form method="POST" action="{% url 'global' %}"> 
+            <label for="id_post_input_text">New Post: </label>
+            <input type="text" id="id_post_input_text" name="text" required>
+            <button type="submit" id="id_post_button">Submit</button>
+            {% csrf_token %}
+        </form>
+        {% for post in posts %}
+            <div id ="id_post_div_{{post.id}}" class="post_div">
+                <a href="{% url 'other_profile' post.user.id %}"
+                    id="id_post_profile_{{post.id}}">
+                    Post by {{post.user.first_name}} {{post.user.last_name}}
+                </a> 
+                <p id="id_post_text_{{post.id}}">{{post.text}}</p><p id="id_post_date_time_{{post.id}}">{{post.creation_time|date:"n/j/Y g:i A"}}</p>
+            </div>
+            <form class="comment">
+                <label>Comment:</label>
+                <input type="text" id="id_comment_input_text_{{post.id}}" name="comment_text" required>
+                <button type="submit" id="id_comment_button_{{post.id}}">Submit</button>
+                {% csrf_token %}
+            </form>
+        {% endfor %}
+    </div>
+{% endblock %}
